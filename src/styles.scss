@@ -3,3 +3,11 @@
 
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
 
+.mat-mdc-card.mat-elevation-z7 {
+  @include mat.elevation(7);
+}
+
+.mat-horizontal-stepper.mat-elevation-z5 {
+  @include mat.elevation(5);
+}
+
