@@ -1,7 +1,8 @@
-## All right to angular material course.
+## All rights belong to angular material course.
 ### This is the notes that I took along the learning process.
 
-## 1. Set up for local development
+## 1. Introduction.
+### Set up for local development
 Install Node.js LTS. my version: V16.14.0
 Optional. Install Git. my version: 2.39.2
 IDE. VS Code.
@@ -31,3 +32,17 @@ add angular material: ng add @angular/material
 import the specific module to where it's going to be used.
 
 run with npm start # preferred to ng serve.
+
+# 2. material navigation and material component.
+## build navigation with angular material
+### mat-sidenav-container
+1. mat-sidenav
+
+    .open() .close()
+
+2. mat-toolbar
+
+    dropdown menu
+    matMenuTriggerFor
+
+3. outerLink
