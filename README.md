@@ -1,158 +1,59 @@
+## All rights belong to angular material course.
+### This is the notes that I took along the learning process.
 
-## Angular Material In Depth
+## 1. Introduction.
+### Set up for local development
+Install Node.js LTS. my version: V16.14.0
+Optional. Install Git. my version: 2.39.2
+IDE. VS Code.
+clone the repo from course site: https://github.com/angular-university/angular-material-course
+git clone https://github.com/angular-university/angular-material-course.git
 
-This repository contains the code of the [Angular Material In Depth](https://angular-university.io/course/angular-material-course) video course.
+cd angular-material-course # go to project folder
 
-This course repository is updated to Angular 16:
+git checkout 1-start
 
-![Angular Material In Depth](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-material-course-1.jpg)
+git branch
 
-You can find the starting point of the course in the [1-start branch](https://github.com/angular-university/angular-material-course/tree/1-start).
+npm ci # Install code dependency. This is to ensure use the exact version as specified in package-lock.json (instead of npm install).
 
-This master branch contains the *final version of the course code*, that you can use as a reference if you choose to code along.
+npm install -g @angular/cli # Angular CLI: 16.0.3
 
-# Installation pre-requisites
+what is material design. https://m3.material.io/
+A specification from google to define good user interface.
 
-IMPORTANT: Please use Node 18 LST (Long Term Support version).
+add angular material to an existing project.
+details steps and of what changes introduced are documented @material homepage https://material.angular.io/guide/getting-started.
 
-# Installing the Angular CLI
+create a new angular project: ng new project-name
 
-With the following command the angular-cli will be installed globally in your machine:
+add angular material: ng add @angular/material
 
-    npm install -g @angular/cli 
+import the specific module to where it's going to be used.
 
-# How To install this repository
+run with npm start # preferred to ng serve.
 
-We can install the master branch using the following commands:
+## Publish local VSCode changes to personal github account/repository 
+### go to VSCode git plugin, remote, add remote
+### click add remote from github
+### allow checkin, after signin, choose repository name and click
 
-    git clone https://github.com/angular-university/firebase-course.git
+# 2. material navigation and material component.
+## build navigation with angular material
+### mat-sidenav-container
+1. mat-sidenav
 
-    cd angular-material-course
-    npm ci
+    .open() .close()
 
-Note: **We recommend using npm ci, instead of npm install**. This will ensure that you use the exact dependency versions set on package-lock.json, unlike npm install which might potentially change those versions.
+2. mat-toolbar
 
-# To Run the Development Backend Server
+    dropdown menu
+    matMenuTriggerFor
 
-Our Angular frontend connects to a simple Node server, running also in your local development machine.
+3. outerLink
 
-We can start the sample application backend with the following command:
+4. mat-tab-group
 
-    npm run server
+5. mat-card
 
-# To run the Development UI Server
-
-Once the backend server is up and running, we can now run our frontend server. 
-
-To run the frontend part of our code, we will use the Angular CLI:
-
-    npm start 
-
-The application is visible at port 4200: [http://localhost:4200](http://localhost:4200)
-
-Note: **make sure to use command npm start and not ng serve, as npm start adds a couple extra options that are needed for our project **
-
-# Other Courses
-
-# Other Courses
-
-# Angular Forms In Depth
-
-If you are looking for the [Angular Forms In Depth](https://angular-university.io/course/angular-forms-course) course, the repo with the full code can be found here:
-
-![Angular Forms In Depth](https://angular-university.s3-us-west-1.amazonaws.com/course-images/angular-forms-course-small.jpg)
-
-# Angular Router In Depth
-
-If you are looking for the [Angular Router In Depth](https://angular-university.io/course/angular-router-course) course, the repo with the full code can be found here:
-
-![Angular Router In Depth](https://angular-university.s3-us-west-1.amazonaws.com/course-images/angular-router-course.jpg)
-
-# NgRx (with NgRx Data) - The Complete Guide
-
-If you are looking for the [Ngrx (with NgRx Data) - The Complete Guide](https://angular-university.io/course/ngrx-course), the repo with the full code can be found here:
-
-![Ngrx (with NgRx Data) - The Complete Guide](https://angular-university.s3-us-west-1.amazonaws.com/course-images/ngrx-v2.png)
-
-
-# Angular Core Deep Dive Course
-
-If you are looking for the [Angular Core Deep Dive Course](https://angular-university.io/course/angular-course), the repo with the full code can be found here:
-
-![Angular Core Deep Dive](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png)
-
-# RxJs In Practice
-
-If you are looking for the [RxJs In Practice](https://angular-university.io/course/rxjs-course), the repo with the full code can be found here:
-
-![RxJs In Practice Course](https://s3-us-west-1.amazonaws.com/angular-university/course-images/rxjs-in-practice-course.png)
-
-# NestJs In Practice (with MongoDB)
-
-If you are looking for the [NestJs In Practice Course](https://angular-university.io/course/nestjs-course), the repo with the full code can be found here:
-
-![NestJs In Practice Course](https://angular-university.s3-us-west-1.amazonaws.com/course-images/nestjs-v2.png)
-
-# Angular Testing Course
-
-If you are looking for the [Angular Testing Course](https://angular-university.io/course/angular-testing-course), the repo with the full code can be found here:
-
-![Angular Testing Course](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-testing-small.png)
-
-# Serverless Angular with Firebase Course
-
-If you are looking for the [Serverless Angular with Firebase Course](https://angular-university.io/course/firebase-course), the repo with the full code can be found here:
-
-![Serverless Angular with Firebase Course](https://s3-us-west-1.amazonaws.com/angular-university/course-images/serverless-angular-small.png)
-
-# Angular Universal Course
-
-If you are looking for the [Angular Universal Course](https://angular-university.io/course/angular-universal-course), the repo with the full code can be found here:
-
-![Angular Universal Course](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-universal-small.png)
-
-# Angular PWA Course
-
-If you are looking for the [Angular PWA Course](https://angular-university.io/course/angular-pwa-course), the repo with the full code can be found here:
-
-![Angular PWA Course - Build the future of the Web Today](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png)
-
-# Angular Security Masterclass
-
-If you are looking for the [Angular Security Masterclass](https://angular-university.io/course/angular-security-course), the repo with the full code can be found here:
-
-[Angular Security Masterclass](https://github.com/angular-university/angular-security-course).
-
-![Angular Security Masterclass](https://s3-us-west-1.amazonaws.com/angular-university/course-images/security-cover-small-v2.png)
-
-# Angular Advanced Library Laboratory Course
-
-If you are looking for the Angular Advanced Course, the repo with the full code can be found here:
-
-[Angular Advanced Library Laboratory Course: Build Your Own Library](https://angular-university.io/course/angular-advanced-course).
-
-![Angular Advanced Library Laboratory Course: Build Your Own Library](https://angular-academy.s3.amazonaws.com/thumbnails/advanced_angular-small-v3.png)
-
-
-## RxJs and Reactive Patterns Angular Architecture Course
-
-If you are looking for the RxJs and Reactive Patterns Angular Architecture Course code, the repo with the full code can be found here:
-
-[RxJs and Reactive Patterns Angular Architecture Course](https://angular-university.io/course/reactive-angular-architecture-course)
-
-![RxJs and Reactive Patterns Angular Architecture Course](https://s3-us-west-1.amazonaws.com/angular-academy/blog/images/rxjs-reactive-patterns-small.png)
-
-
-## Complete Typescript Course - Build A REST API
-
-If you are looking for the Complete Typescript 2 Course - Build a REST API, the repo with the full code can be found here:
-
-[https://angular-university.io/course/typescript-2-tutorial](https://github.com/angular-university/complete-typescript-course)
-
-[Github repo for this course](https://github.com/angular-university/complete-typescript-course)
-
-![Complete Typescript Course](https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-small.png)
-
-
-
-
+6. mat-stepper
