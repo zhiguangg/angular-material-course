@@ -1,4 +1,9 @@
 {
+  "angularCompilerOptions": {
+    "strictTemplates": true,
+    "preserveWhitespaces": true,
+    // ...
+  },
   "compileOnSave": false,
   "compilerOptions": {
     "module": "es2020",
