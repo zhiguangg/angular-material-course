@@ -1,6 +1,38 @@
 <div [formGroup]="form" class="course-details-form">
-
-
+  <mat-form-field appearance="outline">
+    <input matInput placeholder="Course Title" formControlName="title" #title>
+  </mat-form-field>
+  <mat-radio-group formControlName="courseType">
+    <mat-radio-button value="free">Free</mat-radio-button>
+    <mat-radio-button value="premium">Premium</mat-radio-button>
+  </mat-radio-group>
+  <mat-form-field appearance="outline">
+    <mat-select formControlName="category" placeholder="select a category">
+      <mat-optgroup label="Beginners">
+        <mat-option value="beginner to javascript">Beginner to Javascript</mat-option>
+        <mat-option value="beginner to programming">Beginner to programming</mat-option>
+        <mat-option value="beginner to Rxjs">Beginner to Rxjs</mat-option>
+      </mat-optgroup>
+      <mat-option value="intermediate">Intermediate</mat-option>
+      <mat-option value="advanced">Advanced</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Released at</mat-label>
+    <input matInput formControlName="releasedAt" placeholder="Release date" [matDatepicker]="datePicker">
+    <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+    <mat-datepicker #datePicker [dateClass]="dateClass"></mat-datepicker>
+  </mat-form-field>
+  <mat-checkbox formControlName="downloadsAllowed">Downloads allowed?</mat-checkbox>
+  <mat-form-field >
+    <mat-label>Description</mat-label>
+    <textarea matInput
+      formControlName="longDescription" p
+      laceholder="Description"
+      cdkTextareaAutosize="true"
+      cdkAutosizeMaxRows="5"
+      cdkAutosizeMinRows="3"></textarea>
+  </mat-form-field>
 </div>
 
 

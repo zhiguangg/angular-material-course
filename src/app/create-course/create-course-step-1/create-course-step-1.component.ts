@@ -1,6 +1,15 @@
 import {Component} from '@angular/core';
-import {UntypedFormBuilder, Validators} from '@angular/forms';
+import {UntypedFormBuilder, Validators, FormControl, FormGroupDirective, NgForm } from '@angular/forms';
+import {ErrorStateMatcher} from '@angular/material/core';
+import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 
+/** Error when invalid control is dirty, touched, or submitted. */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 
 @Component({
   selector: "create-course-step-1",
@@ -22,6 +31,18 @@ export class CreateCourseStep1Component {
     longDescription: ['', [Validators.required, Validators.minLength(3)]]
   });
 
+  dateClass: MatCalendarCellClassFunction<Date> = (cellDate, view) => {
+    // Only highligh dates inside the month view.
+    if (view === 'month') {
+      const date = cellDate.getDate();
+
+      // Highlight the 1st and 20th day of each month.
+      return date === 1 || date === 20 ? 'highlight-date' : '';
+    }
+
+    return '';
+  };
+
   constructor(private fb: UntypedFormBuilder) {
 
   }
@@ -30,4 +51,5 @@ export class CreateCourseStep1Component {
     return this.form.controls['title'];
   }
 
+  matcher = new MyErrorStateMatcher();
 }

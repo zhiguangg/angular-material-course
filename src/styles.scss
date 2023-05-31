@@ -11,3 +11,8 @@
   @include mat.elevation(5);
 }
 
+button.highlight-date {
+  background: red;
+  border-radius: 100%;
+}
+
