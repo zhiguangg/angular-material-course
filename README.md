@@ -33,6 +33,8 @@ import the specific module to where it's going to be used.
 
 run with npm start # preferred to ng serve.
 
+npm run server #run backend server
+
 ## Publish local VSCode changes to personal github account/repository 
 ### go to VSCode git plugin, remote, add remote
 ### click add remote from github
@@ -57,3 +59,10 @@ run with npm start # preferred to ng serve.
 5. mat-card
 
 6. mat-stepper
+
+7. mat-table
+
+8. multiTemplateDataRows    # data selection
+
+24. mat-table * sort doesn't work
+25. expansion doesn't work
