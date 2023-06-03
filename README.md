@@ -64,5 +64,7 @@ npm run server #run backend server
 
 8. multiTemplateDataRows    # data selection
 
+9. mat-dialog
+
 24. mat-table * sort doesn't work
 25. expansion doesn't work
