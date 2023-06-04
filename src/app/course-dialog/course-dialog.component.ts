@@ -44,6 +44,7 @@ export function openCourseDialog(dialog: MatDialog, course: Course) {
   const config = new MatDialogConfig();
   config.disableClose = true;
   config.autoFocus = true;
+  config.panelClass = 'modal-panel';
   config.data = { ...course };
 
   const dialogRef = dialog.open(CourseDialogComponent, config);

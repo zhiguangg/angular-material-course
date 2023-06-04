@@ -66,5 +66,9 @@ npm run server #run backend server
 
 9. mat-dialog
 
+10. mat-grid-list and mat-grid-tile
+    angular material breakpointObserver
+    dynamically style w/ ngClass
+    dynamically style dialog globally w/ config.panelClass and mixin.scss
 24. mat-table * sort doesn't work
 25. expansion doesn't work

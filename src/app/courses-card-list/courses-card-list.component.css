@@ -29,3 +29,11 @@ mat-card-content p {
   padding: 10px;
 }
 
+.handset-portrait long-description {
+  padding: 5px 0;
+}
+
+handset-portrait mat-card-title {
+  padding: 5px;
+}
+
